@@ -1,0 +1,33 @@
+:root {
+    --text-color: #1a2233;
+    --primary-color: #1c3e8c;
+    --bg-color: #f7f1e9;
+    --accent-color: #dea407;
+    --border-radius: 8px;
+
+
+    background-color: var(--bg-color);
+    padding: 50px;
+    color: var(--text-color);
+    font-family: "IBM Plex Sans Devanagari", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    color: var(--primary-color);
+}
+
+h2 {
+    color: var(--primary-color)
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.education-item {
+    padding: 4px 8px;
+}
+

@@ -1,0 +1,80 @@
+.list-container {
+    display:flex;
+    flex-direction: row;
+    column-gap: 10vw;
+}
+
+.testimonials-card {
+    display:flex;
+    flex-direction: column;
+    width:45vw;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative; 
+    box-sizing: border-box;
+}
+
+.role-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-color);
+    overflow: hidden;
+    padding: 4px 8px;
+    max-width: fit-content;
+}
+
+.role-item:hover {
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.role {
+    position: relative;
+    z-index: 2;
+    padding: 2px;
+}
+
+.company {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-100%);
+    transition: opacity 0.2s ease, transform 0.3s cubic-bezier(0.25, 1, 0.5, 1) 0.1s;
+    opacity: 0;
+}
+
+.role-item:hover .company {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.25s ease, transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.overlay-container {
+    display: grid;
+    grid-template-areas: "stack";
+    position: relative;
+}
+
+.paragraph {
+    grid-area: stack;
+    margin: 0;
+    opacity: 1;
+    font-weight:500;
+    transform: translateX(200%) scale(90%);
+    transition: opacity 0.2s ease, transform 0.3s cubic-bezier(0.25, 1, 0.5, 1) 0.25s;
+}
+
+.paragraph.prep-left {
+    transition: none !important;
+    transform: translateX(-200%) scale(90%);
+    opacity: 0;
+}
+
+.p-active {
+    transform: translateX(0) scale(100%);
+    transition: opacity 0.2s ease, transform 0.3s cubic-bezier(0.25, 1, 0.5, 1) 0.25s;
+}
