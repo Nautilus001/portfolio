@@ -1,6 +1,7 @@
 .card-container {
     display: inline-flex;
     gap: 20px;
+    padding-right: 50px;
 }
 
 .card {
@@ -16,25 +17,11 @@
     box-sizing: border-box;
 }
 
-.card-header {
-    font-size: 16px;
-    margin: 0;
-    transition: opacity 0.5 ease, transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
 .icon-link {
-    position: absolute;
-    width:100%;
+    width: 100%;
     height: 100%;
-    z-index: 1;
-    opacity: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: inherit;
     text-decoration: none;
-    transform: translateY(100%) scale(90%);
-    transition: opacity 0.5 ease, transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .icon {
@@ -44,18 +31,7 @@
     color: var(--primary-color);
 }
 
-.card:hover .icon-link {
-    opacity: 1;
-    transform: translateY(0) scale(100%);
-    transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.card:hover .card-header {
-    opacity: 0;
-    transform: translateY(-100%) scale(90%);
-    transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
+.card:active,
 .card:hover {
     background-color: var(--accent-color);
 }
