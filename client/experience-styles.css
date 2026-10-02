@@ -40,20 +40,6 @@
     padding: 2px;
 }
 
-.company {
-    position: relative;
-    z-index: 1;
-    transform: translateX(-100%);
-    transition: opacity 0.2s ease, transform 0.3s cubic-bezier(0.25, 1, 0.5, 1) 0.1s;
-    opacity: 0;
-}
-
-.role-item:hover .company {
-    opacity: 1;
-    transform: translateX(0);
-    transition: opacity 0.25s ease, transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
 .overlay-container {
     display: grid;
     grid-template-areas: "stack";

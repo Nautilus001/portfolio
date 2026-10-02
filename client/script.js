@@ -3,7 +3,7 @@ const paragraphs = document.querySelectorAll('.overlay-container .paragraph');
 const experienceList = document.getElementById('experience-list');
 
 roleItems.forEach((item) => {
-    item.addEventListener('mouseenter', () => {
+    item.addEventListener('mousedown', () => {
         const targetClass = item.getAttribute('data-target');
         const activeParagraph = document.querySelector(`.overlay-container .${targetClass}`);
 
@@ -19,11 +19,3 @@ roleItems.forEach((item) => {
         }
     });
 });
-
-if (experienceList) {
-    experienceList.addEventListener('mouseleave', () => {
-        paragraphs.forEach((p) => {
-            p.classList.remove('p-active', 'prep-left');
-        });
-    });
-}
